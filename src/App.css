@@ -13,9 +13,10 @@
   margin: auto;
   border-radius: 20px;
   box-shadow: 0px 0px 200px 2px rgba(0, 255, 115, 0.8);
-  animation: glow 3s forwards infinite;
+  /* animation: glow 3s forwards infinite; */
   display: flex;
   place-items: center;
+  justify-content: center;
 }
 
 @keyframes glow {
@@ -35,5 +36,40 @@
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  margin: auto;
+  margin: 20px 50px;
+  animation: planet 10s linear infinite;
+  box-shadow: 0px 0px 100px 30px rgba(255, 177, 31, 0.8),
+    0px 0px 200px 50px rgba(5, 160, 221, 0.8);
+}
+
+.sun::after {
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  position: relative;
+  top: -200px;
+  box-shadow: 0px 0px 100px 20px rgba(5, 160, 221, 0.8);
+}
+
+@keyframes planet {
+  0% {
+    transform: rotate(0deg);
+    box-shadow: 0px 0px 100px 30px rgba(255, 177, 31, 0.8),
+      0px 0px 200px 50px rgba(5, 160, 221, 0.8);
+  }
+
+  50% {
+    transform: rotate(180deg);
+    box-shadow: 0px 0px 200px 30px rgba(255, 177, 31, 0.8),
+      0px 0px 200px 50px rgba(5, 160, 221, 0.8);
+  }
+
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 0px 0px 100px 30px rgba(255, 177, 31, 0.8),
+      0px 0px 200px 50px rgba(5, 160, 221, 0.8);
+  }
 }

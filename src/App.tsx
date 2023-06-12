@@ -4,7 +4,7 @@ function App() {
     <div className="main">
       <div className="sub">
         <div className="sun"></div>
-        <div className="planet"></div>
+        {/* <div className="planet"></div> */}
       </div>
     </div>
   );
